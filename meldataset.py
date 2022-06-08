@@ -1,9 +1,4 @@
 #coding: utf-8
-"""
-TODO:
-- make TestDataset
-- separate transforms
-"""
 
 import os
 import os.path as osp
