@@ -10,7 +10,7 @@ cd AuxiliaryASR
 ```
 3. Install python requirements: 
 ```bash
-pip install SoundFile torchaudio torch jiwer pyyaml click matplotlib
+pip install SoundFile torchaudio torch jiwer pyyaml click matplotlib g2p_en
 ```
 4. Prepare your own dataset and put the `train_list.txt` and `val_list.txt` in the `Data` folder (see Training section for more details).
 
@@ -23,7 +23,7 @@ Please specify the training and validation data in `config.yml` file. The data l
 Checkpoints and Tensorboard logs will be saved at `log_dir`. To speed up training, you may want to make `batch_size` as large as your GPU RAM can take. However, please note that `batch_size = 64` will take around 10G GPU RAM. 
 
 ### Languages
-This repo is set up for English, but you can train it with other languages. If you would like to trian for datasets in different languages, you will need to modify the [meldataset.py](https://github.com/yl4579/AuxiliaryASR/blob/main/meldataset.py#L86-L93) file (L86-93) with your own phonemizer. You also need to change the vocabulary file ([word_index_dict.txt](https://github.com/yl4579/AuxiliaryASR/blob/main/word_index_dict.txt)) and change `n_token` to reflect the number of tokens. A recommended phonemizer for other languages is [phonemizer](https://github.com/bootphon/phonemizer).
+This repo is set up for English with the [g2p_en](https://github.com/Kyubyong/g2p) package, but you can train it with other languages. If you would like to trian for datasets in different languages, you will need to modify the [meldataset.py](https://github.com/yl4579/AuxiliaryASR/blob/main/meldataset.py#L86-L93) file (L86-93) with your own phonemizer. You also need to change the vocabulary file ([word_index_dict.txt](https://github.com/yl4579/AuxiliaryASR/blob/main/word_index_dict.txt)) and change `n_token` to reflect the number of tokens. A recommended phonemizer for other languages is [phonemizer](https://github.com/bootphon/phonemizer).
 
 ## References
 - [NVIDIA/tacotron2](https://github.com/NVIDIA/tacotron2)
