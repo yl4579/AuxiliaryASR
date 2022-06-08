@@ -89,7 +89,7 @@ class MelDataset(torch.utils.data.Dataset):
             ps.remove("'")
         text = self.text_cleaner(ps)
         blank_index = self.text_cleaner.word_index_dictionary[" "]
-        text.insert(0, blank_index) # add a blank in the beginning (silence)
+        text.insert(0, blank_index) # add a blank at the beginning (silence)
         text.append(blank_index) # add a blank at the end (silence)
         
         text = torch.LongTensor(text)
@@ -110,7 +110,6 @@ class Collater(object):
         self.return_wave = return_wave
 
     def __call__(self, batch):
-        # batch[0] = wave, mel, text, f0, speakerid
         batch_size = len(batch)
 
         # sort by mel length
