@@ -10,7 +10,7 @@ cd AuxiliaryASR
 ```
 3. Install python requirements: 
 ```bash
-pip install SoundFile torchaudio torch jiwer pyyaml click matplotlib g2p_en
+pip install SoundFile torchaudio torch jiwer pyyaml click matplotlib g2p_en librosa
 ```
 4. Prepare your own dataset and put the `train_list.txt` and `val_list.txt` in the `Data` folder (see Training section for more details).
 
