@@ -1,6 +1,7 @@
 #coding:utf-8
 import os
 import os.path as osp
+import pandas as pd
 
 DEFAULT_DICT_PATH = osp.join('word_index_dict.txt')
 class TextCleaner:
