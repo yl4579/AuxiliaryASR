@@ -5,7 +5,7 @@ This repo contains the training code for Phoneme-level ASR for Voice Conversion 
 1. Python >= 3.7
 2. Clone this repository:
 ```bash
-git https://github.com/yl4579/AuxiliaryASR.git
+git clone https://github.com/yl4579/AuxiliaryASR.git
 cd AuxiliaryASR
 ```
 3. Install python requirements: 
