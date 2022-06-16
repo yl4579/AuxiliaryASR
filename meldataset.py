@@ -22,7 +22,7 @@ logger.setLevel(logging.DEBUG)
 from text_utils import TextCleaner
 np.random.seed(1)
 random.seed(1)
-DEFAULT_DICT_PATH = osp.join(osp.dirname(__file__), 'word_index_dict.txt') #'kata_dict.csv') #
+DEFAULT_DICT_PATH = osp.join(osp.dirname(__file__), 'word_index_dict.txt')
 SPECT_PARAMS = {
     "n_fft": 2048,
     "win_length": 1200,
@@ -30,6 +30,9 @@ SPECT_PARAMS = {
 }
 MEL_PARAMS = {
     "n_mels": 80,
+    "n_fft": 2048,
+    "win_length": 1200,
+    "hop_length": 300
 }
 
 class MelDataset(torch.utils.data.Dataset):
